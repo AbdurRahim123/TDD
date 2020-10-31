@@ -23,6 +23,10 @@ public class Payment
 		{
 			 action = new PackSlipShipping();
 		}
+		if (paymentType.equalsIgnoreCase("book"))
+		{
+			 action = new PackSlipShipping();
+		}
 		return action; 
 	}
 	

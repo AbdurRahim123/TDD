@@ -14,4 +14,13 @@ public class AppTest
     	Packslip packslip = (Packslip) payment.takeAction();
     	assertEquals(true,packslip.isSlipGenerated());
     }
+    @Test
+    public void checkbookProductShipping()
+    {
+    	Payment payment = new Payment("book");
+    	Packslip packslip = (Packslip) payment.takeAction();
+    	assertEquals(true,packslip.isSlipGenerated());
+    }
+    
+
 }
