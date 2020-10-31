@@ -17,5 +17,8 @@ UpgradeMember(int membershipId)
 public void setActivated(boolean isActivated) {
 	this.isActivated = isActivated;
 }
-
+public boolean isMemberValid()
+{
+	return true;
+}
 }
