@@ -42,5 +42,12 @@ public class AppTest
     	UpgradeMember upgrademember = (UpgradeMember) payment.takeAction();
     	assertEquals(true,upgrademember.isActivated());
     }
+    @Test
+    public void isValidMemberduringupgrade()
+    {
+    	Payment payment = new Payment("upgrade",123);
+    	UpgradeMember upgrademember = (UpgradeMember) payment.takeAction();
+    	assertEquals(true,upgrademember.isMemberValid());
+    }
 
 }
