@@ -6,10 +6,15 @@ public class Payment
 {
 	private String paymentType;
 	Action action;
-
+	Membership member;
 	Payment(String paymentType)
 	{
 		this.paymentType = paymentType;	
+	}
+	Payment(String paymentType, Membership member)
+	{
+		this.paymentType = paymentType;	
+		this.member=member;
 	}
 	public String getPaymentType() {
 		return paymentType;
