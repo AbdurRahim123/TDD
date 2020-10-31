@@ -28,6 +28,10 @@ public class Payment
 			PackSlipShipping packSlipShipping = new PackSlipShipping();
 			action = new PackSlipRoyalty(packSlipShipping.getSlipNo());
 		}
+		if (paymentType.equalsIgnoreCase("membership"))
+		{
+			action = new Membership();
+		}
 		return action; 
 	}
 	
