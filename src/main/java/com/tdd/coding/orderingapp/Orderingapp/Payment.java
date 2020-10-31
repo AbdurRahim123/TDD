@@ -25,7 +25,8 @@ public class Payment
 		}
 		if (paymentType.equalsIgnoreCase("book"))
 		{
-			 action = new PackSlipShipping();
+			PackSlipShipping packSlipShipping = new PackSlipShipping();
+			action = new PackSlipRoyalty(packSlipShipping.getSlipNo());
 		}
 		return action; 
 	}
