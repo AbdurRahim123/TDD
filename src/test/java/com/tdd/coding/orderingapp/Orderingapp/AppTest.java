@@ -28,5 +28,12 @@ public class AppTest
     	Packslip packslip = (Packslip) payment.takeAction();
     	assertEquals(true,packslip.isSlipGenerated());
     }
+    @Test
+    public void checkMemberShipactivated()
+    {
+    	Payment payment = new Payment("mebership");
+    	Membership membership = (Membership) payment.takeAction();
+    	assertEquals(true,membership.isActivated());
+    }
 
 }
