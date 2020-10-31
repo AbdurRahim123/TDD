@@ -1,6 +1,9 @@
 package com.tdd.coding.orderingapp.Orderingapp;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import com.add.coding.orderingapp.interfaces.Packslip;
 
 public class AppTest 	
 {
@@ -8,6 +11,7 @@ public class AppTest
     public void checkPhysicalProductShipping()
     {
     	Payment payment = new Payment("physical");
-    	assertEquals(true,packslip.isSlipGenerated);
+    	Packslip packslip = (Packslip) payment.takeAction();
+    	assertEquals(true,packslip.isSlipGenerated());
     }
 }
