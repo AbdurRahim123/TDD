@@ -38,8 +38,9 @@ public class AppTest
     @Test
     public void checkupgradeMembership()
     {
-    	
-    	assertEquals(true,upgrademember.isUpgraded());
+    	Payment payment = new Payment("upgrade",123);
+    	UpgradeMember upgrademember = (UpgradeMember) payment.takeAction();
+    	assertEquals(true,upgrademember.isActivated());
     }
 
 }
