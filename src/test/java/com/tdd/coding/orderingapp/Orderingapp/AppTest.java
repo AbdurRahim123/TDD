@@ -35,5 +35,11 @@ public class AppTest
     	Membership membership = (Membership) payment.takeAction();
     	assertEquals(true,membership.isActivated());
     }
+    @Test
+    public void checkupgradeMembership()
+    {
+    	
+    	assertEquals(true,upgrademember.isUpgraded());
+    }
 
 }
