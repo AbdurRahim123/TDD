@@ -37,6 +37,10 @@ public class Payment
 		{
 			action = new Membership();
 		}
+		if (paymentType.equalsIgnoreCase("upgrade"))
+		{
+			action = new UpgradeMember(membershipId);
+		}
 		return action; 
 	}
 	
